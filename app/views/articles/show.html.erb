@@ -1,0 +1,9 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+<%= link_to "Edit article", "/articles/#{@article.id}/edit" %>
+<br>
+<%= link_to "Delete article", article_path(@article.id),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<br>
+<%= link_to "Back to articles", "/articles" %>
